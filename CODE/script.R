@@ -180,7 +180,7 @@ build_tfidf_sparse <- function(df_part, vocab) {
   tfidf <- tok %>%
     bind_tf_idf(word, doc_id, n)
   
-
+  
   X <- tfidf %>%
     select(doc_id, word, tf_idf) %>%
     tidytext::cast_sparse(doc_id, word, tf_idf)
@@ -336,7 +336,7 @@ cat("AUC:", auc(roc_xgb), "\n")
 
 
 
-
+ 
 ############################################################
 # 9) VISUALISATIONS – IJC437 (Model evaluation)
 ############################################################
@@ -452,6 +452,15 @@ ggplot(complexity_df, aes(Complexity, AUC, label = Model)) +
 # DV1 – TF-IDF Signal Distribution
 # Compares lexical signal strength between classes
 
+
+tfidf_summary <- Matrix::rowSums(X_train_tfidf)
+
+df_plot <- tibble(
+  tfidf_sum = tfidf_summary,
+  chart_class = factor(df_train$top50, labels = c("Not Top 50", "Top 50"))
+)
+
+
 ggplot(df_plot, aes(x = tfidf_sum, fill = chart_class)) +
   geom_density(alpha = 0.45, color = "grey20", linewidth = 0.6, adjust = 1.1) +
   
@@ -509,6 +518,16 @@ ggplot(df_plot, aes(x = tfidf_sum, fill = chart_class)) +
 
 # DV2 – Random Forest Feature Importance (Top 10)
 # Highlights most influential features
+rf_imp <- importance(rf_model) 
+
+rf_imp_df <- data.frame(
+  Feature = rownames(rf_imp),
+  MeanDecreaseGini = rf_imp[, "MeanDecreaseGini"]
+) %>%
+  arrange(desc(MeanDecreaseGini)) %>%
+  slice_head(n = 10)
+  
+
 ggplot(rf_imp_df,
        aes(x = reorder(Feature, MeanDecreaseGini),
            y = MeanDecreaseGini)) +
@@ -590,6 +609,13 @@ rf_imp_df %>%
 
 # DV4 – Prediction Confidence Distribution
 # Visualises model uncertainty
+
+pred_df <- tibble(
+  prob = rf_prob, 
+  true = factor(y_test, labels = c("Not Top 50", "Top 50")) 
+  )
+
+
 ggplot(pred_df, aes(x = prob, fill = true)) +
   geom_histogram(
     aes(y = after_stat(density)),
@@ -622,8 +648,3 @@ ggplot(pred_df, aes(x = prob, fill = true)) +
     legend.position = "top",
     panel.grid.minor = element_blank()
   )
-
-
-
-
-
