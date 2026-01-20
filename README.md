@@ -118,6 +118,9 @@ Run the scripts in the following order:
 > **Note:** Downloading the dataset via Kaggle requires Kaggle API credentials.  
 > Alternatively, the CSV file can be manually placed in the `billboard_data/` directory.
 
+Detailed step-by-step instructions for running the code are provided in `RUN_INSTRUCTIONS.md`.
+
+
 ---
 
 ## Repository Structure
