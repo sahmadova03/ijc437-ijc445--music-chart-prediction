@@ -5,10 +5,6 @@
 # - Split the cleaned dataset into training and test sets
 # - Use stratified sampling to preserve class proportions
 # - Define target variables for model training and evaluation
-#
-# NOTE:
-# All code below is copied directly from the original
-# working script. No logic has been modified.
 ############################################################
 
 
