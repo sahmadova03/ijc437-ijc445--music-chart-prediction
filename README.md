@@ -83,8 +83,12 @@ A structured and reproducible data science pipeline is implemented:
    Dedicated visualisations support:
    - Model comparison and evaluation (IJC437)  
    - Interpretability and predictive uncertainty (IJC445)
+   - 
+Additional visual outputs generated during the analysis are available in the `outputs/figures/` directory.
+<img width="716" height="482" alt="ijc437_comparison_models" src="https://github.com/user-attachments/assets/8e2177c9-d098-4946-8d46-5238acdef649" />
 
 ---
+
 
 ## Key Findings
 - **Lyrical features provide meaningful predictive signal**, but do not fully separate Top 50 and non-Top 50 songs, indicating that lyrics alone are insufficient predictors of chart success.
