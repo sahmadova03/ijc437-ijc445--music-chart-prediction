@@ -5,10 +5,7 @@
 # - Perform TF-IDF feature engineering using song lyrics and titles
 # - Build the vocabulary using training data only to prevent data leakage
 # - Construct sparse TF-IDF matrices for both training and test sets
-#
-# NOTE:
-# All code below is copied directly from the original
-# working script. No logic has been modified.
+
 ############################################################
 
 
