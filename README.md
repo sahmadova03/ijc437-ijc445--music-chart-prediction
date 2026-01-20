@@ -137,7 +137,22 @@ CODE/
  ┣ 08_visualisation_IJC437.R
  ┗ 09_visualisation_IJC445.R
 
-script.R   # Original unmodified working script (backup)
+outputs/
+ ┗ figures/
+   ┣ ijc437_roc_curves.png
+   ┣ ijc437_comparison_models.png
+   ┣ ijc437_accuracy_balanced_accuracy.png
+   ┣ ijc437_feature_importance.png
+   ┣ ijc437_model_complexity.png
+   ┣ IJC445_tf_idf_by_chart_class.png
+   ┣ IJC445_top_most_important_features.png
+   ┣ IJC445_relative_contribution_lyrics_metadata.png
+   ┗ IJC445_prediction_confidence_distribution.png
+
+README.md               # Project overview, aims, methods, and key findings
+RUN_INSTRUCTIONS.md     # Step-by-step instructions for running the code
+script.R                # Original unmodified working script (backup)
+
 
 ## Author
 Student: **Sara Ahmadova**  
