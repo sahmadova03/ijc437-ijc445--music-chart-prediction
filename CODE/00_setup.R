@@ -8,7 +8,6 @@
 # This script implements the full data science pipeline:
 # data loading → text processing → feature engineering →
 # model training → evaluation → visualisation.
-# No code logic is modified; comments are added for clarity.
 ############################################################
 
 
