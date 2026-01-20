@@ -6,12 +6,6 @@
 # - Unzip the dataset files
 # - Load the main CSV file into R
 # - Perform an initial inspection of the raw data
-#
-# NOTE:
-# All code in this script is taken directly from the original
-# working script. No logic has been modified.
-############################################################
-
 
 ############################################################
 # 2) Data loading
