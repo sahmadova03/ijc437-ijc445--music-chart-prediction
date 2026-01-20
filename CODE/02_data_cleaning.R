@@ -10,10 +10,7 @@
 # Target variable:
 # - top50 = 1 → song ranked within Top 50
 # - top50 = 0 → song ranked outside Top 50
-#
-# NOTE:
-# All code below is copied directly from the original
-# working script. No logic has been modified.
+
 ############################################################
 
 
