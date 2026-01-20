@@ -83,9 +83,9 @@ A structured and reproducible data science pipeline is implemented:
    Dedicated visualisations support:
    - Model comparison and evaluation (IJC437)  
    - Interpretability and predictive uncertainty (IJC445)
-   - 
+     
 Additional visual outputs generated during the analysis are available in the `outputs/figures/` directory.
-<img width="716" height="482" alt="ijc437_comparison_models" src="https://github.com/user-attachments/assets/8e2177c9-d098-4946-8d46-5238acdef649" />
+
 
 ---
 
@@ -96,6 +96,8 @@ Additional visual outputs generated during the analysis are available in the `ou
 - **Ensemble-based models (Random Forest and XGBoost)** achieve the strongest overall performance, reflecting their ability to capture non-linear relationships.
 - **Increased model complexity improves AUC**, but introduces trade-offs in interpretability and computational cost.
 - Visualisations reveal substantial **prediction uncertainty**, highlighting overlap between successful and unsuccessful songs rather than deterministic outcomes.
+
+  <img width="716" height="482" alt="ijc437_comparison_models" src="https://github.com/user-attachments/assets/8e2177c9-d098-4946-8d46-5238acdef649" />
 
 ---
 
